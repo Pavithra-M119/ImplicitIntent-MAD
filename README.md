@@ -17,13 +17,37 @@ Latest Version Android Studio
 ```
 /*
 Program to print the text “Implicitintent”.
-Developed by:
-Registeration Number :
+Developed by:Pavithra M
+Registeration Number :212221040119![implicit method](https://github.com/suryacse05/ImplicitIntent-MAD/assets/119229774/73cbe89e-a802-4930-88b0-f2e41453de85)
+
 */
-```
+``
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        EditText editText;
+        Button button;
+
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        button=findViewById(R.id.button);
+        editText=findViewById(R.id.editTextText);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url=editText.getText().toString();
+                Intent intent=new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                startActivity(intent);
+            }
+        });
+    }
+}
 
 ## OUTPUT
 
+![implicit method](https://github.com/suryacse05/ImplicitIntent-MAD/assets/119229774/51c88ecc-3b05-4174-8e95-6af981983533)
 
 
 
